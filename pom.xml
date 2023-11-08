@@ -1,0 +1,12 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.neosoft.training</groupId>
+    <artifactId>ToDoList</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
+
+
+</project>
