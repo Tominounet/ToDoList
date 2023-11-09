@@ -3,12 +3,15 @@ package com.neosoft.training.model;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlTransient;
 import org.apache.commons.lang3.RandomStringUtils;
 
 @XmlRootElement
 public class User {
     @XmlAttribute
     private final String id = RandomStringUtils.randomNumeric(10);
+    @XmlTransient
+    private final String password = RandomStringUtils.randomNumeric(20);
     @XmlElement
     private final String nom;
     @XmlElement
@@ -32,6 +35,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
+                ", password='" + password + '\'' +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", mail='" + mail + '\'' +
