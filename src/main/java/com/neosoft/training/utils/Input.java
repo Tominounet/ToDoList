@@ -75,6 +75,6 @@ public class Input {
             }
         }
 
-        return saisie.booleanValue();
+        return saisie;
     }
 }
