@@ -28,7 +28,7 @@ public class SaisieHandler {
     /**
      Création d'un utilisateur
      */
-    public User createUtilisateur() {
+    public static User createUtilisateur() {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Veuillez saisir votre nom : ");
