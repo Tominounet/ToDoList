@@ -16,13 +16,13 @@ public class XmlSerialiser {
         Marshaller marshaller = ctx.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        File file = FileCreator.creerFichier("test.xml");
+        File file = FileCreator.creerFichier("test", "xml");
         marshaller.marshal(user, file);
 
         return file;
     }
 
-    public static User unserializeUser(File file) throws JAXBException, IOException {
+    public static User unserializeUser(File file) throws JAXBException {
         JAXBContext ctx = JAXBContext.newInstance(User.class);
         Unmarshaller unmarshaller = ctx.createUnmarshaller();
 

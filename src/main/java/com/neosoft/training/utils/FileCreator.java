@@ -7,8 +7,8 @@ public class FileCreator {
 
     private static final String directory = "C:/Users/t.richard/Downloads/";
 
-    public static File creerFichier(String fileName) throws IOException {
-        File nouveauFichier = new File(directory + fileName + ".xml");
+    public static File creerFichier(String fileName, String fileExtension) throws IOException {
+        File nouveauFichier = new File(directory + fileName + "." + fileExtension);
         if (nouveauFichier.delete()) {
             System.out.println("Le Fichier existe déjà. Il a été supprimé.");
         }
