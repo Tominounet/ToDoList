@@ -4,6 +4,10 @@ import com.neosoft.training.services.SaisieHandler;
 import com.neosoft.training.utils.Input;
 import com.neosoft.training.model.MenuOption;
 import com.neosoft.training.services.RepositoryHandler;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.RandomStringGenerator;
+import org.apache.commons.text.StringSubstitutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.LoggerFactoryFriend;
@@ -26,7 +30,7 @@ public class Main {
                 inputMenu = Input.inputInt(scanner, inputMenu);
                 MenuOption.find(inputMenu);
             } catch (IllegalArgumentException e) {
-                log.error("Erreur : " + e.getMessage());
+                log.error("Erreur : {}", e.getMessage(), e);
             }
         }
         System.out.println("Au revoir");
