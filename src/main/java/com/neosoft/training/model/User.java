@@ -50,6 +50,39 @@ public class User {
         this.dateCreation = LocalDate.now();
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public LocalDate getDateCreation() {
+        return dateCreation;
+    }
+
+    public String getInitials() {
+        char prenomInitial = this.getPrenom().toUpperCase().charAt(0);
+        char nomInitial = this.getNom().toUpperCase().charAt(0);
+        StringBuilder strBuild = new StringBuilder();
+        strBuild.append(prenomInitial);
+        strBuild.append(nomInitial);
+        return strBuild.toString();
+    }
+
     @Override
     public String toString() {
         return "User{" +

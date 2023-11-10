@@ -1,13 +1,28 @@
 package com.neosoft.training.repository;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-public abstract class Repository {
-    private List list;
+public interface Repository {
+    List list = new ArrayList<>();
+    public default void add(Object entity) {
+        list.add(entity);
+    };
 
-    public abstract void add();
-    public abstract void remove();
-    public abstract void find();
+    public default void remove(Object entity) {
+        list.remove(entity);
+    };
+
+    public default void find(Map parameters) {
+//        for (parameter: parameters) {
+//
+//        }
+    };
+
+    public default List getList() {
+        return list;
+    }
 
 
 }
