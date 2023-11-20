@@ -25,4 +25,9 @@ public interface Repository {
     }
 
 
+    void add();
+
+    void remove();
+
+    void find();
 }

@@ -1,6 +1,6 @@
 package com.neosoft.training.repository;
 
-public class UserRepository extends Repository {
+public class UserRepository implements Repository {
 
     @Override
     public void add() {

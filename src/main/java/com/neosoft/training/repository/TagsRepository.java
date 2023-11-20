@@ -1,6 +1,6 @@
 package com.neosoft.training.repository;
 
-public class TagsRepository extends Repository{
+public class TagsRepository implements Repository {
     @Override
     public void add() {
 
